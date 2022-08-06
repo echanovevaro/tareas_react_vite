@@ -1,0 +1,56 @@
+// COLOR VARIABLES
+:root {
+	--color-grey-dark-2: #3a3a3a;
+	--color-primary: #5474ac;
+	--color-primary-dark: #6387c6;
+	--color-primary-darker: #4b6694;
+
+	--color-secondary: #101d2c;
+
+	--color-grey-light-1: #f9f7f6;
+	--color-grey-light-2: #aaa;
+
+	--color-grey-dark-1: #646465;
+	--font-primary: 'Nunito', sans-serif;
+	--font-display: 'Josefin Sans', sans-serif;
+}
+// FONT VARIABLES
+$color-primary-dark: #6387c6;
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; //1 rem = 16px   10/16  -->  1rem = 10px
+	@media screen and (max-width: 550px) {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-family: var(--font-primary);
+	background-color: var(--color-grey-light-2);
+	color: var(--color-grey-dark-2);
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+.container {
+	@media screen and (max-width: 550px) {
+		width: 100%;
+		display: flex;
+
+		flex-wrap: wrap;
+	}
+	margin: 0 0.2rem;
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+
+	align-items: baseline;
+	justify-items: stretch;
+	grid-gap: 0.2rem;
+}

@@ -1,0 +1,64 @@
+@use 'formulario' as *;
+
+.listado {
+	@media screen and (max-width: 550px) {
+		width: 100%;
+		// display: flex;
+
+		// flex-wrap: wrap;
+	}
+
+	text-transform: uppercase;
+	font-weight: 1000;
+	text-align: center;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	margin-right: 0.2rem;
+
+	.btn-edit {
+		@include btn(#3da418bc);
+	}
+	.btn-del {
+		@include btn(#de1f1fb5);
+	}
+
+	.editar-eliminar {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		letter-spacing: 0.5rem;
+
+		color: var(--color-grey-dark-2);
+	}
+
+	background-color: rgba(#fff, 0.8);
+
+	box-shadow: 2px 4px 5px rgba(black, 0.2);
+	border-radius: 5px;
+
+	span {
+		color: var(--color-primary-dark);
+		text-transform: none;
+		font-weight: 600;
+	}
+
+	.tarea {
+		text-align: left;
+		background-color: #fff;
+		border: 0.5px solid rgba(var(--color-grey-light-2), 0.5);
+		display: block;
+		padding: 1.5rem;
+		border-radius: 5px;
+		margin: 1rem;
+
+		p {
+			font-weight: 1000;
+			margin-bottom: 0.6rem;
+			color: rgba(var(--color-grey-dark-2), 0.6);
+		}
+	}
+}
